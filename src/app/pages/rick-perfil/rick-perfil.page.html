@@ -1,0 +1,33 @@
+<ion-header>
+    <!--<app-header [pageTitle]="pageTitle"> </app-header>-->
+    <ion-toolbar>
+        <ion-buttons slot="start" size= "large">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+        <ion-title> {{pageTitle}} </ion-title>
+        <ion-avatar slot="end">
+            <img src="./../../../assets/icon/rym.jpg" alt="">
+        </ion-avatar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-avatar id="avatar" >
+            <img src="{{ character.image}} " alt="">
+        </ion-avatar>
+        <ion-header>
+            <ion-card-title id="nombre">
+                Nombre: {{character.name}}
+            </ion-card-title>
+        </ion-header>
+        <ion-card-content id="datos">
+            <h2>Especie: {{character.species}} </h2>
+            <h2>Género: {{character.gender}} </h2>
+            <h2>Locación: {{character.location.name}} </h2>
+            <h2>Origen: {{character.origin.name}} </h2>
+            <h2>Estado: {{character.status}} </h2>
+            <h2>Tipo: {{character.type}} </h2>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

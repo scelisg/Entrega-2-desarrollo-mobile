@@ -1,0 +1,63 @@
+<ion-header>
+    <!--<app-header [pageTitle]="pageTitle"> </app-header>-->
+    <ion-toolbar>
+        <ion-buttons slot="start" size= "large">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+        <ion-title> {{pageTitle}} </ion-title>
+        <ion-avatar slot="end">
+            <img src="./../../../assets/icon/rym.jpg" alt="">
+        </ion-avatar>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-app>
+        <ion-content class="ion-page">
+            <div>
+                    <img id = "FotoDivisas" src= "./assets/icon/Divisas.jpg" alt= "Portada">
+            <ion-card-header>
+                <ion-card-tittle>
+                    <ion-text expand="block" color="tertiary"> 
+                    INGRESE CIFRA
+                    </ion-text>
+                </ion-card-tittle>
+            </ion-card-header>
+
+                    <ion-input id="valor1"type="number" placeholder="Solo números" [(ngModel)]="cantidad"></ion-input>
+            
+            <ion-card-header>    
+                <ion-card-tittle>
+                    <ion-text expand="block" color="tertiary"> 
+                    SELECCIONE MONEDA
+                    </ion-text>
+                </ion-card-tittle>
+
+            </ion-card-header>
+                <ion-item>
+                    <ion-label>Convertir desde: </ion-label>
+                    <ion-select id="monedaDesde" [(ngModel)]="monedaDesde">
+                        <ion-select-option value="1">CLP</ion-select-option>
+                        <ion-select-option value="2">Dolar</ion-select-option>
+                        <ion-select-option value="3">Euro</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Convertir a: </ion-label>
+                    <ion-select id="MonedaA" [(ngModel)]="monedaA">
+                        <ion-select-option value="1">CLP</ion-select-option>
+                        <ion-select-option value="2">Dolar</ion-select-option>
+                        <ion-select-option value="3">Euro</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </div>
+
+            <ion-button expand="block" color="tertiary" (click)="convertirMoneda()">Convertir</ion-button>
+            <br> Resultado: $ {{resultado}}
+            <br>
+            <br>
+
+        </ion-content>
+    </ion-app>
+</ion-content>

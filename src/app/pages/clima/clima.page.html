@@ -1,0 +1,28 @@
+<ion-header>
+    <!--<app-header [pageTitle]="pageTitle"> </app-header>-->
+    <ion-toolbar>
+        <ion-buttons slot="start" size= "large">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+        <ion-title> {{pageTitle}} </ion-title>
+        <ion-avatar slot="end">
+            <img src="./../../../assets/icon/rym.jpg" alt="">
+        </ion-avatar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+
+        <img src="../../../assets/icon/santiago.jpg" alt="" id="santi">
+
+        <ion-header>
+            <ion-card-title id="nombre"text-align= "justify">
+                Ciudad: {{name}}
+            </ion-card-title>
+        </ion-header>
+        <ion-card-content id="datos">
+            Temperatura actual: {{grados}} °C <br> Temperatura máxima: {{gradosMax}} °C<br> Temperatura mínima: {{gradosMin}} °C <br> Sensación Térmica: {{sensacion}} °C <br> Velocidad del viento: {{windSpeed}} <br> Humedad: {{humidity}}%
+        </ion-card-content>
+    </ion-card>
+</ion-content>
